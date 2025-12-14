@@ -18,7 +18,7 @@ export const PRODUCTS: Product[] = [
     price: 4.50,
     currency: "USD",
     images: [
-      "./data/logo.png",
+      "/logo.png",
       "https://picsum.photos/id/20/800/800",
       "https://picsum.photos/id/119/800/800"
     ],

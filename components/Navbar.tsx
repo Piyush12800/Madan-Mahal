@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center flex-shrink-0">
             <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
               <img 
-                src="../data/logo.png" 
+                src="/logo.png" 
                 alt="Madan Mahal" 
                 className="h-40 w-60"
               />
