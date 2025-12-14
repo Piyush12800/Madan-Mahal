@@ -53,11 +53,11 @@ const ProductDetail: React.FC = () => {
           
           {/* Image Gallery */}
           <div className="space-y-4">
-            <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden border border-gray-100">
+            <div className="aspect-square bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden border border-gray-100">
               <img 
                 src={activeImage} 
                 alt={product.name} 
-                className="w-full h-full object-cover animate-fade-in"
+                className="w-full h-full object-contain p-4 animate-fade-in"
               />
             </div>
             
@@ -67,11 +67,11 @@ const ProductDetail: React.FC = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveImage(img)}
-                    className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+                    className={`relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all bg-gray-50 ${
                       activeImage === img ? 'border-paper-600 ring-2 ring-paper-100' : 'border-transparent hover:border-gray-300'
                     }`}
                   >
-                    <img src={img} alt={`View ${idx + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`View ${idx + 1}`} className="w-full h-full object-contain p-1" />
                   </button>
                 ))}
               </div>

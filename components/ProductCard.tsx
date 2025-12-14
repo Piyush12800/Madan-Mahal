@@ -11,13 +11,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Link to={`/product/${product.id}`} className="group block h-full">
       <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 border border-paper-100 h-full flex flex-col hover:-translate-y-2">
-        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-white">
           <img 
             src={product.images[0]} 
             alt={product.name} 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-y-3 group-hover:translate-y-0 transition-all duration-300">
             <span className="bg-white text-paper-700 p-3 rounded-full shadow-xl inline-flex items-center justify-center hover:bg-paper-50">
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
