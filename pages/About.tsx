@@ -71,8 +71,11 @@ const About: React.FC = () => {
               About <span className="text-paper-600">Madan Mahal</span>
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              For nearly two decades, we've been crafting premium paper products while respecting our planet. 
-              Our mission is simple: deliver quality notebooks and registers that inspire creativity without compromising our environment.
+              Chouksey Pustak & Paper Industries is a leading manufacturer of notebooks and paper stationery products, based in Jabalpur, Madhya Pradesh. With decades of experience in the paper and stationery industry, the company has built a strong reputation for quality, reliability, and consistency.
+              We specialize in the manufacturing of exercise notebooks, registers, long books, project books, and accounting copies, catering to schools, colleges, wholesalers, and institutional buyers. Our products are known for their superior paper quality, durable binding, and refined finishing.
+              Our manufacturing facility is equipped with advanced Lineomatic machinery, including a Fully Automatic Online Exercise Notebook Machine, enabling high-speed production with precision and minimal human intervention. This ensures uniform quality across every notebook we produce.
+              We use high-quality paper sourced from reputed mills such as Ballarpur Industries Limited (BGPPL) and are also an authorized dealer of BGPPL copier and fine print paper grades, serving Central India with a dependable supply of premium paper.
+              Driven by innovation and continuous improvement, we are steadily expanding our manufacturing capacity and market reach, with a clear vision to serve national and international markets while maintaining uncompromised quality standards.
             </p>
           </div>
         </div>

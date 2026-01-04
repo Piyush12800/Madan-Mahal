@@ -1,7 +1,7 @@
 import { Product } from './types';
 
 export const COMPANY_INFO = {
-  name: "Madan Mahal",
+  name: "Chouksey Pustak & Paper Industries",
   email: "choukseypaper@gmail.com",
   phone1: "+91 9425837763   ",
   phone2: "+91 8989000658",
@@ -11,16 +11,18 @@ export const COMPANY_INFO = {
 export const PRODUCTS: Product[] = [
   {
     id: "p-001",
-    name: "Classic Spiral Notebook",
-    category: "Notebooks",
-    description: "Durable spiral binding with 70gsm recycled paper.",
-    fullDescription: "Our Classic Spiral Notebook is designed for students and professionals alike. Featuring a sturdy poly cover and 160 pages of high-quality, 70gsm recycled paper that resists ink bleed-through. The spiral binding allows the book to lay flat for comfortable writing.",
+    name: "Classmind A4 Notebook",
+    category: "A4 Notebooks",
+    description: " ",
+    fullDescription: "",
     price: 4.50,
     currency: "USD",
     images: [
-      "/demo.jpg",
-      "https://picsum.photos/id/20/800/800",
-      "https://picsum.photos/id/119/800/800"
+      "/CMA41",
+      "/CMA42",
+      "/CMA43",
+      "/CMA44",
+      "/CMA45"
     ],
     features: [
       "160 ruled pages",
