@@ -5,10 +5,10 @@ import { COMPANY_INFO } from '../constants';
 
 const About: React.FC = () => {
   const milestones = [
-    { year: '2005', title: 'Founded', description: 'Madan Mahal Paper Mills established with a vision for sustainable manufacturing' },
-    { year: '2010', title: 'Growth Phase', description: 'Expanded production capacity and introduced eco-friendly product lines' },
-    { year: '2015', title: 'Innovation', description: 'Pioneered recycled paper technology in central India' },
-    { year: '2020', title: 'Sustainability', description: 'Achieved 100% renewable energy for manufacturing operations' },
+    { year: '1975', title: 'Founded', description: 'Madan Mahal Paper Mills established with a vision for sustainable manufacturing' },
+    { year: '1995', title: 'Growth Phase', description: 'Expanded production capacity and introduced eco-friendly product lines' },
+    { year: '2010', title: 'Innovation', description: 'Pioneered recycled paper technology in central India' },
+    { year: '2025', title: 'Sustainability', description: 'Achieved 100% renewable energy for manufacturing operations' },
   ];
 
   const values = [
@@ -72,15 +72,19 @@ const About: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Chouksey Pustak & Paper Industries is a leading manufacturer of notebooks and paper stationery products, based in Jabalpur, Madhya Pradesh. With decades of experience in the paper and stationery industry, the company has built a strong reputation for quality, reliability, and consistency.
+              
               We specialize in the manufacturing of exercise notebooks, registers, long books, project books, and accounting copies, catering to schools, colleges, wholesalers, and institutional buyers. Our products are known for their superior paper quality, durable binding, and refined finishing.
+              
               Our manufacturing facility is equipped with advanced Lineomatic machinery, including a Fully Automatic Online Exercise Notebook Machine, enabling high-speed production with precision and minimal human intervention. This ensures uniform quality across every notebook we produce.
+              
               We use high-quality paper sourced from reputed mills such as Ballarpur Industries Limited (BGPPL) and are also an authorized dealer of BGPPL copier and fine print paper grades, serving Central India with a dependable supply of premium paper.
+              
               Driven by innovation and continuous improvement, we are steadily expanding our manufacturing capacity and market reach, with a clear vision to serve national and international markets while maintaining uncompromised quality standards.
             </p>
           </div>
         </div>
       </section>
-
+/*
       {/* Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +111,7 @@ const About: React.FC = () => {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <div className="aspect-square bg-gradient-to-br from-paper-100 to-paper-50 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-paper-600 mb-2">20+</div>
+                  <div className="text-6xl font-bold text-paper-600 mb-2">50+</div>
                   <p className="text-gray-700 font-semibold">Years of Excellence</p>
                 </div>
               </div>
@@ -187,35 +191,7 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center p-8 bg-gradient-to-br from-paper-50 to-white rounded-2xl border border-paper-100">
-              <div className="text-5xl font-bold text-paper-600 mb-2">500K+</div>
-              <p className="text-gray-700 font-semibold">Products Sold</p>
-              <p className="text-gray-600 text-sm mt-2">Trusted by customers worldwide</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-paper-50 to-white rounded-2xl border border-paper-100">
-              <div className="text-5xl font-bold text-paper-600 mb-2">50+</div>
-              <p className="text-gray-700 font-semibold">Wholesale Partners</p>
-              <p className="text-gray-600 text-sm mt-2">Growing network across India</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-paper-50 to-white rounded-2xl border border-paper-100">
-              <div className="text-5xl font-bold text-paper-600 mb-2">100%</div>
-              <p className="text-gray-700 font-semibold">Recycled Materials</p>
-              <p className="text-gray-600 text-sm mt-2">Committed to sustainability</p>
-            </div>
-            <div className="text-center p-8 bg-gradient-to-br from-paper-50 to-white rounded-2xl border border-paper-100">
-              <div className="text-5xl font-bold text-paper-600 mb-2">0</div>
-              <p className="text-gray-700 font-semibold">Carbon Footprint</p>
-              <p className="text-gray-600 text-sm mt-2">100% renewable energy usage</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-paper-600 to-paper-700 text-white">

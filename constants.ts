@@ -10,105 +10,133 @@ export const COMPANY_INFO = {
 
 export const PRODUCTS: Product[] = [
   {
-    id: "p-001",
-    name: "Classmind A4 Notebook",
-    category: "A4 Notebooks",
+    id: "",
+    name: "Classmind A4 Register",
+    category: "A4 Register",
     description: " ",
     fullDescription: "",
-    price: 4.50,
-    currency: "USD",
+    price: ,
+    currency: "",
     images: [
-      "/CMA41",
-      "/CMA42",
-      "/CMA43",
-      "/CMA44",
-      "/CMA45"
+      "/CMA41.jpeg",
+      "/CMA42.jpeg",
+      "/CMA43.jpeg",
+      "/CMA44.jpeg",
+      "/CMA45.jpeg"
     ],
     features: [
-      "160 ruled pages",
-      "Recycled paper material",
-      "Lay-flat spiral binding",
-      "Water-resistant cover"
+      
     ],
-    stockStatus: 'In Stock'
+    stockStatus:
   },
   {
-    id: "p-002",
-    name: "Executive Hardcover Register",
-    category: "Registers",
-    description: "Professional hardcover register for office record keeping.",
-    fullDescription: "Maintain your records with dignity using our Executive Hardcover Register. Bound in a premium faux-leather texture, this register contains 400 pages of acid-free archival quality paper, ensuring your data lasts for decades.",
-    price: 12.00,
-    currency: "USD",
+    id: "",
+    name: "Classmind Premium Royal Notebook",
+    category: "Notebook",
+    description: "",
+    fullDescription: "",
+    price: ,
+    currency: "",
     images: [
-      "/Demo 2.jpeg",
-      "https://picsum.photos/id/180/800/800"
+      "/CMRoyal1.jpeg",
+      "/CMRoyal2.jpeg",
+      "/CMRoyal3.jpeg",
+      "/CMRoyal4.jpeg",
+      "/CMRoyal5.jpeg",
+      "/CMRoyal6.jpeg"
     ],
     features: [
-      "400 pages",
-      "Hardbound cover",
-      "Index page included",
-      "Numbered pages"
+      "",
+      "",
+      "",
+      ""
     ],
-    stockStatus: 'In Stock'
+    stockStatus: ''
   },
   {
-    id: "p-003",
-    name: "Eco-Sketch Artist Pad",
-    category: "Art Supplies",
-    description: "Heavyweight textured paper perfect for charcoal and graphite.",
-    fullDescription: "Unleash your creativity on our Eco-Sketch Artist Pad. Each sheet is 150gsm, providing a substantial tooth for charcoal, graphite, and light washes. Completely acid-free to prevent yellowing over time.",
-    price: 8.99,
-    currency: "USD",
+    id: "",
+    name: "Classmind Practical NoteBook",
+    category: "Practical Notebook",
+    description: "",
+    fullDescription: "",
+    price: ,
+    currency: "",
     images: [
-      "https://picsum.photos/id/152/800/800"
+      "/CMPRA1.jpeg",
+      "/CMPRA2.jpeg",
+      "/CMPRA3.jpeg"
     ],
     features: [
-      "50 sheets",
-      "150gsm heavyweight paper",
-      "Top glue binding",
-      "Acid-free"
+      "",
+      "",
+      "",
+      ""
     ],
-    stockStatus: 'Low Stock'
+    stockStatus: ''
   },
   {
-    id: "p-004",
-    name: "Premium A4 Copier Paper",
-    category: "Office Supplies",
-    description: "High whiteness, jam-free paper for all printers.",
-    fullDescription: "Reliability meets sustainability. Our Premium A4 Copier Paper is engineered for high-speed printing without jams. With 96 brightness, your text pops, making it ideal for presentations and official documents.",
-    price: 6.50,
-    currency: "USD",
+    id: "",
+    name: "Schoolmind Royal NoteBook",
+    category: "Notebook",
+    description: "",
+    fullDescription: "",
+    price: ,
+    currency: "",
     images: [
-      "https://picsum.photos/id/175/800/800",
-      "https://picsum.photos/id/250/800/800",
-      "https://picsum.photos/id/366/800/800"
+      "/SMRoyal1.jpeg",
+      "/SMRoyal2.jpeg",
+      "/SMRoyal3.jpeg",
+      "/SMRoyal4.jpeg",
+      "/SMRoyal5.jpeg"
     ],
     features: [
-      "500 sheets per ream",
-      "80gsm weight",
-      "ColorLok technology",
-      "FSC Certified"
+      "",
+      "",
+      "",
+      ""
     ],
-    stockStatus: 'In Stock'
+    stockStatus: ''
   },
   {
-    id: "p-005",
-    name: "Pocket Memo Pad",
+    id: "",
+    name: "Schoolmind A4 Register",
+    category: "Register",
+    description: "",
+    fullDescription: "",
+    price: ,
+    currency: "",
+    images: [
+      "/SMA41.jpeg",
+      "/SMA42.jpeg",
+      "/SMA43.jpeg",
+      "/SMA44.jpeg",
+      "/SMA45.jpeg",
+      "/SMA46.jpeg",
+    ],
+    features: [
+      "",
+      "",
+      "",
+      ""
+    ],
+    stockStatus: ''
+  },
+  {
+    id: "",
+    name: "",
     category: "Notebooks",
     description: "Compact size for notes on the go.",
     fullDescription: "Never lose a thought again. This pocket-sized memo pad fits easily into a shirt pocket or purse. Featuring perforated sheets for easy tear-out and a stiff cardboard back for writing without a table.",
-    price: 2.25,
-    currency: "USD",
+    price: ,
+    currency: "",
     images: [
-      "https://picsum.photos/id/401/800/800",
-      "https://picsum.photos/id/534/800/800"
+      "",
     ],
     features: [
-      "50 sheets",
-      "Top wire binding",
-      "Perforated pages",
-      "3x5 inch size"
+      "",
+      "",
+      "",
+      ""
     ],
     stockStatus: 'Made to Order'
   }
