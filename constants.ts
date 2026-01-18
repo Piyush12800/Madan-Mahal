@@ -15,7 +15,7 @@ export const PRODUCTS: Product[] = [
     category: "A4 Register",
     description: " ",
     fullDescription: "",
-    price: ,
+    price: 0,
     currency: "",
     images: [
       "/CMA41.jpeg",
@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
     features: [
       
     ],
-    stockStatus:
+    stockStatus: 'In Stock'
   },
   {
     id: "",
@@ -35,7 +35,7 @@ export const PRODUCTS: Product[] = [
     category: "Notebook",
     description: "",
     fullDescription: "",
-    price: ,
+    price: 0,
     currency: "",
     images: [
       "/CMRoyal1.jpeg",
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
       "",
       ""
     ],
-    stockStatus: ''
+    stockStatus: 'In Stock'
   },
   {
     id: "",
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
     category: "Practical Notebook",
     description: "",
     fullDescription: "",
-    price: ,
+    price:0,
     currency: "",
     images: [
       "/CMPRA1.jpeg",
@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
       "",
       ""
     ],
-    stockStatus: ''
+    stockStatus: 'In Stock'
   },
   {
     id: "",
@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     category: "Notebook",
     description: "",
     fullDescription: "",
-    price: ,
+    price: 0,
     currency: "",
     images: [
       "/SMRoyal1.jpeg",
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
       "",
       ""
     ],
-    stockStatus: ''
+    stockStatus: 'In Stock'
   },
   {
     id: "",
@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
     category: "Register",
     description: "",
     fullDescription: "",
-    price: ,
+    price: 0,
     currency: "",
     images: [
       "/SMA41.jpeg",
@@ -119,18 +119,19 @@ export const PRODUCTS: Product[] = [
       "",
       ""
     ],
-    stockStatus: ''
+    stockStatus: 'In Stock'
   },
   {
     id: "",
     name: "",
     category: "Notebooks",
-    description: "Compact size for notes on the go.",
+    description: "",
     fullDescription: "Never lose a thought again. This pocket-sized memo pad fits easily into a shirt pocket or purse. Featuring perforated sheets for easy tear-out and a stiff cardboard back for writing without a table.",
-    price: ,
+    price: 0,
     currency: "",
     images: [
-      "",
+      "/MMSILVERA44",
+      "/MMSILVERA45",
     ],
     features: [
       "",
