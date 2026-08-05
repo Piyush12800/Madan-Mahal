@@ -1,0 +1,268 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   MADAN MAHAL — design tokens
+   Every colour is derived from the registered trademark (red / yellow / black)
+   or from the product itself (58 GSM off-white stock, printed ruling blue-grey,
+   kraft bale wrapper). Nothing here is decorative by default.
+   ========================================================================== */
+
+@theme {
+  /* Ink — warm-cast near-black, the colour of litho ink on cheap board */
+  --color-ink: #14100e;
+  --color-graphite: #4a443e;
+  /* Darkened from #7d766d, which only reached 3.7:1 on paper. Now 5.4:1. */
+  --color-pencil: #67615a;
+
+  /* Stock — cool off-white of notebook paper, not a warm cream */
+  --color-paper: #f3f2ee;
+  --color-surface: #fbfaf8;
+
+  /* Trademark. `brand` is only 4.2:1 on paper, so it is reserved for display
+     type, fills and rules; `brand-dark` (6.1:1) carries small red text. */
+  --color-brand: #e1231e;
+  --color-brand-dark: #b31813;
+  --color-mark: #ffd400;
+
+  /* Printed ruling */
+  --color-rule: #a8b6c4;
+
+  /* Kraft bale wrapper */
+  --color-kraft: #c9a87c;
+  --color-kraft-dark: #6f5836;
+
+  --font-display: 'Archivo', 'Arial Narrow', Impact, sans-serif;
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, 'Courier New', monospace;
+
+  /* The pasted-label shadow, taken straight off the logo artwork */
+  --shadow-label: 5px 5px 0 0 var(--color-ink);
+  --shadow-label-sm: 3px 3px 0 0 var(--color-ink);
+  --shadow-label-brand: 3px 3px 0 0 var(--color-brand);
+
+  --radius-label: 10px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  /* Visible, branded keyboard focus everywhere */
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-mark);
+    color: var(--color-ink);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   Ruled paper
+   The ruling rhythm is a real variable: display line-heights are set to
+   multiples of --rule so headline baselines land on the lines.
+   ========================================================================== */
+
+@utility ruled-field {
+  --rule: 1.75rem;
+  position: relative;
+  isolation: isolate;
+}
+
+@media (min-width: 768px) {
+  .ruled-field {
+    --rule: 2.25rem;
+  }
+}
+
+/* The rules themselves, as a layer behind content */
+@utility ruled-lines {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--rule) - 1px),
+    color-mix(in srgb, var(--color-rule) 60%, transparent) calc(var(--rule) - 1px),
+    color-mix(in srgb, var(--color-rule) 60%, transparent) var(--rule)
+  );
+  background-position: 0 0;
+}
+
+/* ==========================================================================
+   Ruling swatches — each ruling drawn as itself, no image assets
+   ========================================================================== */
+
+@utility ruling-base {
+  --rc: color-mix(in srgb, var(--color-rule) 85%, transparent);
+  --rc-faint: color-mix(in srgb, var(--color-rule) 40%, transparent);
+  /* White, not the page ground: these are samples of paper, and they have to
+     read the same whether they sit on `paper` or on `surface`. */
+  background-color: #ffffff;
+  background-repeat: repeat;
+}
+
+@utility ruling-single {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 8px,
+    var(--rc) 8px 9px
+  );
+}
+
+@utility ruling-double {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 10px,
+    var(--rc) 10px 11px,
+    transparent 11px 14px,
+    var(--rc-faint) 14px 15px
+  );
+}
+
+@utility ruling-four {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--rc-faint) 0 1px,
+    transparent 1px 6px,
+    var(--rc) 6px 7px,
+    transparent 7px 12px,
+    var(--rc) 12px 13px,
+    transparent 13px 18px,
+    var(--rc-faint) 18px 19px,
+    transparent 19px 26px
+  );
+}
+
+@utility ruling-square {
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 7px, var(--rc) 7px 8px),
+    repeating-linear-gradient(to right, transparent 0 7px, var(--rc) 7px 8px);
+}
+
+@utility ruling-none {
+  background-image: none;
+}
+
+/* ==========================================================================
+   Name plate — the signature element.
+   A school copy's printed Name/Class/Subject box, repurposed to carry specs.
+   An unfilled value renders as a blank ruled line, exactly as it would on a
+   real cover. Honest gaps look intentional because they are.
+   ========================================================================== */
+
+@utility plate {
+  border: 1.5px solid var(--color-ink);
+  background-color: var(--color-surface);
+  border-radius: 3px;
+}
+
+@utility plate-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 2.1;
+}
+
+@utility plate-leader {
+  flex: 1 1 auto;
+  align-self: flex-end;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px dotted color-mix(in srgb, var(--color-ink) 40%, transparent);
+  /* Yields to the value rather than pushing it out of the box on narrow screens. */
+  min-width: 0.75rem;
+}
+
+/* ==========================================================================
+   Kraft — the bale-wrapper band
+   ========================================================================== */
+
+@utility kraft-field {
+  background-color: var(--color-kraft);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      color-mix(in srgb, var(--color-kraft-dark) 7%, transparent) 0 2px,
+      transparent 2px 6px
+    );
+}
+
+/* ==========================================================================
+   Motion — one orchestrated page-load moment, nothing scattered
+   ========================================================================== */
+
+@keyframes draw-rules {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility anim-draw-rules {
+  animation: draw-rules 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility anim-settle {
+  animation: settle 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
