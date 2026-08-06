@@ -1,77 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chouksey Pustak & Paper Industries</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              paper: {
-                50: '#fcfdfc',
-                100: '#f5fbf6',
-                200: '#eaf7ed',
-                300: '#d5efdc',
-                400: '#b2dfbe',
-                500: '#86c899',
-                600: '#60aa77',
-                700: '#4d8960',
-                800: '#3f6d4e',
-                900: '#345942',
-              }
-            },
-            animation: {
-              'fade-in': 'fadeIn 0.5s ease-out',
-              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
-            }
-          }
-        }
+
+    <title>Madan Mahal — School notebook manufacturer in Jabalpur</title>
+    <meta
+      name="description"
+      content="Madan Mahal (Chouksey Pustak & Paper Industries) binds school notebooks, exercise books and registers in Jabalpur, Madhya Pradesh. Printed covers, rulings and page counts made to order for wholesale buyers."
+    />
+    <link rel="canonical" href="https://www.choukseypaper.in/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Madan Mahal" />
+    <meta property="og:title" content="Madan Mahal — School notebook manufacturer in Jabalpur" />
+    <meta
+      property="og:description"
+      content="Printed-cover school notebooks bound in Jabalpur. Rulings, page counts and covers made to order for wholesale buyers."
+    />
+    <meta property="og:url" content="https://www.choukseypaper.in/" />
+    <meta property="og:image" content="https://www.choukseypaper.in/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#E1231E" />
+    <!-- 6 KB, not the 1.2 MB original that the old site loaded on every page -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Instrument+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Madan Mahal — Chouksey Pustak & Paper Industries",
+        "alternateName": "Madan Mahal",
+        "url": "https://www.choukseypaper.in/",
+        "logo": "https://www.choukseypaper.in/logo.png",
+        "image": "https://www.choukseypaper.in/logo.png",
+        "email": "choukseypaper@gmail.com",
+        "telephone": ["+919425837763", "+918989000658"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Krishna Kunj, Beside Petrol Pump, Madan Mahal",
+          "addressLocality": "Jabalpur",
+          "addressRegion": "Madhya Pradesh",
+          "postalCode": "482002",
+          "addressCountry": "IN"
+        },
+        "description": "Manufacturer of school notebooks, exercise books and registers with printed covers. Jabalpur, Madhya Pradesh."
       }
     </script>
-    <style>
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
