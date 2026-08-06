@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { findHashTarget } from './lib/legacyUrls';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,12 +15,13 @@ function ScrollManager() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      const target = document.querySelector(hash);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        return;
-      }
+    // findHashTarget rejects anything that is not an element id. Passing a raw
+    // hash to querySelector throws on values like `#/` from the old hash router,
+    // and an uncaught throw in here unmounts the whole app.
+    const target = hash ? findHashTarget(hash) : null;
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
     }
     window.scrollTo(0, 0);
   }, [pathname, hash]);
